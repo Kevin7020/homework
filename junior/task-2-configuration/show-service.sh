@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-config_file="service.conf"
+config_file="$(dirname "$0")/service.conf" #The script should look for the file relative to its own location
+pwd
 
 if [[ ! -f "$config_file" ]]; then
     printf 'Error: configuration file not found: %s\n' "$config_file" >&2
