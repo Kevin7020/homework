@@ -22,3 +22,4 @@ jobs:
       - name: Run configuration exercise
         shell: bash
         run: bash task-2-configuration/show-service.sh #Changed check-service.sh to show-service.sh since the first also doesnt exist
+        working-directory: ./junior # Added working-directory to ensure the script runs in the right folder
